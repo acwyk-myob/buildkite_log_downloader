@@ -3,9 +3,9 @@
 Download logs via the buildkite API, counts test failures.
 
 # Usage
-Create a token that has read access to the pipeline(s) you're interested in.
-Add it to `count_test_file_failures.sh`, and set some other parameters in that
-file.
+Create a Buildkite API token that has read access to the pipeline(s) you're
+interested in. Add it to `count_test_file_failures.sh`, and set some other
+parameters in that file.
 
 Run `./count_test_file_failures.sh`.
 

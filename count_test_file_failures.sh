@@ -10,7 +10,7 @@ access_token=$BK_API_KEY
 ## Configure your details here
 org=myob
 pipeline=compliance-regression-tests
-created_from=2021-12-13T00:00:00Z
+created_from=2021-12-01T00:00:00Z
 url="https://api.buildkite.com/v2/organizations/${org}/pipelines/${pipeline}/builds?branch=master&created_from=${created_from}&include_retried_jobs=true&per_page=100"
 
 function get_builds {
@@ -66,9 +66,3 @@ done
 
 grep -roh "FAILED.*" logs | sort | uniq -c | sort -r
 
-
-# ideal situation:
-# [-] - make script more readable!
-# [x] - filter out the compliance regression suite and run against those
-#       [x] - (BUILDKITE_LABEL=":hammer: Run AU-compliance_service Tests [SIT]")
-# [?] - ioutput to list only (maybe csv)

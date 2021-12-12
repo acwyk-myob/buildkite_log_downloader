@@ -10,16 +10,11 @@ To run against services that are _not_ compliance service, change `compliance_se
 
 
 # Rerequisites
-- Valid BuildKite API key set as `BK_API_KEY` environmant variable and has access to organization and read access to:
-  - Read Agents
-  - Read Teams
-  - Read Artifacts
+- Valid BuildKite Api Key set as `BK_API_KEY`
+  - Can be used from password vault: 
+- BuildKite Api key has READ access to:
   - Read Builds
-  - Read Job and Environment variables
   - Read Job Logs
-  - Read Organizations
-  - Read Pipelines
-  - Read User
 
 # Usage
 Create a Buildkite API token that has read access to the pipeline(s) you're

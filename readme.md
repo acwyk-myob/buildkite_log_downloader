@@ -2,12 +2,24 @@
 
 Download logs via the buildkite API, counts test failures.
 
+# Scope
+This script is scoped to only run against Buildkite E2E regression test jobs containing `compliance_service`.
+
+## Modifying to run against your services
+To run against services that are _not_ compliance service, change `compliance_service` in the `jq` params to your service's job name (example: `🔨 my_service Tests [SIT]` you would use `my_service`)
+
+
 # Rerequisites
 - Valid BuildKite API key set as `BK_API_KEY` environmant variable and has access to organization and read access to:
-  - Artifacts
-  - Builds
-  - Job and Environment variables
-  - Job Logs
+  - Read Agents
+  - Read Teams
+  - Read Artifacts
+  - Read Builds
+  - Read Job and Environment variables
+  - Read Job Logs
+  - Read Organizations
+  - Read Pipelines
+  - Read User
 
 # Usage
 Create a Buildkite API token that has read access to the pipeline(s) you're

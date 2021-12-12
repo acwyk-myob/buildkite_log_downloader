@@ -53,10 +53,7 @@ function download_log {
 
 get_builds | extract_test_runs | sort -k 4 > test_runs.txt
 
-if [ ! -d "./logs" ]
-then
-    mkdir "./logs"
-fi
+mkdir -p "./logs"
 
 cat test_runs.txt |
 while read test_run; do
